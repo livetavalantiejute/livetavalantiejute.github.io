@@ -1,0 +1,62 @@
+$main-color: #0E79B2;
+$secondary-color: #231f20;
+
+$button-font-size: 1.8rem;
+$arrow-font-size: $button-font-size - $button-font-size * 0.3;
+$row-font-size: 1.4rem;
+
+$z-index: (
+    header: 2,
+    sidebar: 1,
+    main: 0,
+    line: -1
+);
+
+@mixin z-index($key) {
+    z-index: map-get($z-index, $key);
+};
+
+$sidebar-width: (
+    desktop: 100px,
+);
+
+h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 4.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: $main-color;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: $secondary-color;
+    margin: 0;
+    color: $main-color;
+}
+
+h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    color: $secondary-color;
+    margin-top: 0;
+}
+
+p {
+    color: $secondary-color;
+    font-family: "Cabin", sans-serif;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+.explain-text {
+    margin-top: 0.6em;
+    text-align: center;
+}

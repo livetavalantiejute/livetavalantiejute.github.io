@@ -1,0 +1,401 @@
+@charset "UTF-8";
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 4.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: #0E79B2;
+  margin-bottom: 0; }
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: #231f20;
+  margin: 0;
+  color: #0E79B2; }
+
+h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: #231f20;
+  margin-top: 0; }
+
+p {
+  color: #231f20;
+  font-family: "Cabin", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 2px; }
+
+.explain-text {
+  margin-top: 0.6em;
+  text-align: center; }
+
+/*pasukti*/
+.rotate {
+  transform: rotate(-90deg);
+  transform-origin: center;
+  /* Legacy vendor prefixes that you probably don't need... */
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+
+.header {
+  height: 100vh;
+  background-color: #fafafa;
+  width: 100%;
+  position: absolute;
+  margin-bottom: 0;
+  display: block;
+  z-index: 2; }
+  .header a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 20vw; }
+
+/*used for top svg*/
+.center-header-logo {
+  left: 50%;
+  top: 40vh;
+  position: relative;
+  transform: translate(-50%, -50%); }
+
+#mainLogo,
+#sidebarLogo {
+  fill-opacity: 0.7;
+  -webkit-transition-duration: 0.2s;
+  /* Safari */
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out; }
+
+#logo-stroke {
+  fill: none;
+  stroke-dasharray: 300, 0, 3000; }
+
+/* logo animation */
+svg:hover #logo-stroke {
+  animation: logo 3.4s;
+  stroke: #0E79B2;
+  stroke-width: 2px; }
+
+/*logo nupiešimas*/
+@keyframes logo {
+  10% {
+    stroke-dasharray: 300, 500, 3000; }
+  100% {
+    stroke-dasharray: 3000, 500, 300; } }
+
+svg:hover #mainLogo {
+  fill: #0E79B2;
+  fill-opacity: 1; }
+
+svg:hover #sidebarLogo {
+  stroke: #0E79B2;
+  stroke-width: 2px;
+  fill-opacity: 0; }
+
+/*Mygtukas scroll*/
+.down-button {
+  display: block;
+  bottom: 8vh;
+  right: 0;
+  position: absolute;
+  position: absolute;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  opacity: 0.5;
+  color: #0E79B2;
+  transition: 0.2s ease-in;
+  z-index: 2; }
+  .down-button:hover {
+    opacity: 1; }
+  .down-button::before {
+    content: "\f053";
+    font-family: FontAwesome;
+    font-size: 1.26rem;
+    color: #0E79B2; }
+
+/* logo container */
+.svg-container {
+  width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  display: block;
+  fill: #0E79B2; }
+
+.me {
+  color: #231f20;
+  position: absolute;
+  font-size: 1.4rem;
+  left: 40px;
+  max-width: 25vw;
+  font-weight: 500;
+  top: 50%;
+  transform: translateY(-50%); }
+
+/*skyrimo linija*/
+hr {
+  border: 0;
+  height: 4px;
+  background-color: #0E79B2;
+  margin: 0;
+  position: relative;
+  z-index: 2; }
+
+/*about skyrimo linija*/
+#about {
+  top: 0;
+  margin-top: 100vh; }
+
+.v2,
+.v3 {
+  border-left: 0.4vw solid #0e79b2;
+  display: inline-block;
+  height: 50vh;
+  position: fixed;
+  margin-left: -0.2vw;
+  top: 0;
+  z-index: 0; }
+
+.vline {
+  height: 50vh;
+  position: fixed;
+  width: 0.5vmin;
+  margin: auto;
+  background-color: #0e79b2;
+  left: 50%;
+  top: 0;
+  z-index: 0;
+  margin-left: -0.2vw;
+  border-radius: 10px; }
+
+.vline.right {
+  left: 9.5%;
+  margin-left: 0; }
+
+.v2.right {
+  left: 10%;
+  margin-left: 0; }
+
+.v3.right {
+  left: 9%;
+  margin-left: 0; }
+
+.v2 {
+  left: 50.5%;
+  margin-left: -0.05vw;
+  margin-right: 0;
+  border-left: 0.1vw solid #0e79b2;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: v-move;
+  animation-name: v-move;
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate; }
+
+.v3 {
+  left: 49.5%;
+  margin-left: -0.05vw;
+  margin-right: 0;
+  border-left: 0.1vw solid #0e79b2;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: v-move;
+  animation-name: v-move;
+  animation-direction: alternate-reverse;
+  -webkit-animation-direction: alternate-reverse; }
+
+@-webkit-keyframes v-move {
+  0% {
+    top: -100%; }
+  100% {
+    top: 100%; } }
+
+@keyframes v-move {
+  0% {
+    top: -100%; }
+  100% {
+    top: 50%;
+    height: 0; } }
+
+svg:hover #sidebarLogo {
+  stroke: #0E79B2;
+  stroke-width: 2px;
+  fill-opacity: 0; }
+
+.sidebar-left {
+  width: 100px;
+  padding: 0;
+  position: fixed;
+  display: block;
+  background: white;
+  height: 100vh;
+  z-index: 1; }
+
+.menuItems {
+  margin-top: 15%;
+  padding-top: 0;
+  overflow-x: hidden; }
+  .menuItems a {
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #0E79B2;
+    opacity: 0.6;
+    overflow-wrap: break-word;
+    text-align: center; }
+    .menuItems a:hover {
+      opacity: 1; }
+
+.floating-box {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 2ch; }
+
+svg:hover #sidebarLogo {
+  stroke: #0E79B2;
+  stroke-width: 2px;
+  fill-opacity: 0; }
+
+.sidebar-left {
+  width: 100px;
+  padding: 0;
+  position: fixed;
+  display: block;
+  background: white;
+  height: 100vh;
+  z-index: 1; }
+
+.menuItems {
+  margin-top: 15%;
+  padding-top: 0;
+  overflow-x: hidden; }
+  .menuItems a {
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #0E79B2;
+    opacity: 0.6;
+    overflow-wrap: break-word;
+    text-align: center; }
+    .menuItems a:hover {
+      opacity: 1; }
+
+.floating-box {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 2ch; }
+
+.about {
+  z-index: 300;
+  position: relative; }
+  .about-text {
+    background-color: #fafafa;
+    margin-top: 0;
+    z-index: 1;
+    padding: 3.8em 0; }
+    .about-text .about-flex {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      flex-basis: 50%; }
+      .about-text .about-flex .about-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column; }
+      .about-text .about-flex img {
+        width: 60%;
+        height: auto; }
+    .about-text h3 {
+      margin: 1.8em 0.5em 0.6em 0.5em; }
+
+.main {
+  margin-left: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; }
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .project-image {
+    width: 48%; }
+    .project-image img {
+      max-width: 100%;
+      max-height: 100%; }
+  .project-description {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .project-description .more-info {
+      border: none;
+      background-color: #f7f7f7;
+      color: #231f20;
+      padding: 1em 2em;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1rem;
+      font-family: "Raleway", sans-serif;
+      font-weight: 600;
+      border-radius: 12px;
+      box-shadow: 3px 3px 0 #0e79b2, -3px -3px 0 white;
+      align-self: flex-end; }
+
+.reverse {
+  flex-direction: row-reverse; }
+  .reverse > .project-description {
+    text-align: right; }
+  .reverse .project-description {
+    align-items: flex-end; }
+  .reverse .more-info {
+    align-self: flex-start; }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  height: auto;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  overflow: auto;
+  overflow-x: hidden;
+  cursor: default; }
+
+/* Nuimti underline nuo linkų*/
+a {
+  text-decoration: none;
+  color: inherit; }

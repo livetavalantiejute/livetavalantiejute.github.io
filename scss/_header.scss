@@ -1,0 +1,135 @@
+.header {
+  height: 100vh;
+  background-color: #fafafa;
+  width: 100%;
+  position: absolute;
+  margin-bottom: 0;
+  display: block;
+
+  @include z-index(header);
+
+  a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 20vw;
+  }
+}
+
+/*used for top svg*/
+.center-header-logo {
+  left: 50%;
+  top: 40vh;
+  position: relative;
+  transform: translate(-50%, -50%);
+}
+
+#mainLogo,
+#sidebarLogo {
+  fill-opacity: 0.7;
+  -webkit-transition-duration: 0.2s; /* Safari */
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+#logo-stroke {
+  fill: none;
+  stroke-dasharray: 300, 0, 3000;
+}
+
+/* logo animation */
+svg:hover #logo-stroke {
+  animation: logo 3.4s;
+  stroke: $main-color;
+  stroke-width: 2px;
+}
+
+/*logo nupiešimas*/
+@keyframes logo {
+  10% {
+    stroke-dasharray: 300, 500, 3000;
+  }
+  100% {
+    stroke-dasharray: 3000, 500, 300;
+  }
+}
+
+svg:hover #mainLogo {
+  fill: $main-color;
+  fill-opacity: 1;
+}
+
+svg:hover #sidebarLogo {
+  stroke: $main-color;
+  stroke-width: 2px;
+  fill-opacity: 0;
+}
+
+/*Mygtukas scroll*/
+.down-button {
+  display: block;
+  bottom: 8vh;
+  right: 0;
+  position: absolute;
+  position: absolute;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: $button-font-size;
+  opacity: 0.5;
+  color: $main-color;
+  transition: 0.2s ease-in;
+
+  @include z-index(header);
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::before {
+    content: "\f053";
+    font-family: FontAwesome;
+    font-size: $arrow-font-size;
+    color: $main-color;
+  }
+}
+
+/* logo container */
+.svg-container {
+  width: 60%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+  display: block;
+  fill: $main-color;
+}
+
+.me {
+  color: $secondary-color;
+  position: absolute;
+  font-size: $row-font-size;
+  left: 40px;
+  max-width: 25vw;
+  font-weight: 500;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*skyrimo linija*/
+hr {
+  border: 0;
+  height: 4px;
+  background-color: $main-color;
+  margin: 0;
+  position: relative;
+  @include z-index(header);
+}
+
+/*about skyrimo linija*/
+#about {
+  top: 0;
+  margin-top: 100vh;
+}

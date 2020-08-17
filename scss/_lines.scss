@@ -1,0 +1,86 @@
+.v2,
+.v3 {
+  border-left: 0.4vw solid #0e79b2;
+  display: inline-block;
+  height: 50vh;
+  position: fixed;
+  margin-left: -0.2vw;
+  top: 0;
+  z-index: 0;
+}
+
+.vline {
+  height: 50vh;
+  position: fixed;
+  width: 0.5vmin;
+  margin: auto;
+  background-color: #0e79b2;
+  left: 50%;
+  top: 0;
+  z-index: 0;
+  margin-left: -0.2vw;
+  border-radius: 10px;
+}
+
+.vline.right {
+  left: 9.5%;
+  margin-left: 0;
+}
+
+.v2.right {
+  left: 10%;
+  margin-left: 0;
+}
+
+.v3.right {
+  left: 9%;
+  margin-left: 0;
+}
+
+.v2 {
+  left: 50.5%;
+  margin-left: -0.05vw;
+  margin-right: 0;
+  border-left: 0.1vw solid #0e79b2;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: v-move;
+  animation-name: v-move;
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+}
+
+.v3 {
+  left: 49.5%;
+  margin-left: -0.05vw;
+  margin-right: 0;
+  border-left: 0.1vw solid #0e79b2;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: v-move;
+  animation-name: v-move;
+  animation-direction: alternate-reverse;
+  -webkit-animation-direction: alternate-reverse;
+}
+
+@-webkit-keyframes v-move {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes v-move {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: 50%;
+    height: 0;
+  }
+}

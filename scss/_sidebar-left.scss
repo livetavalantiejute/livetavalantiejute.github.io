@@ -1,0 +1,45 @@
+svg:hover #sidebarLogo {
+  stroke: $main-color;
+  stroke-width: 2px;
+  fill-opacity: 0;
+}
+
+.sidebar-left {
+  width: 100px;
+  padding: 0;
+  position: fixed;
+  display: block;
+  background: white;
+  height: 100vh;
+
+  @include z-index(sidebar);
+}
+
+.menuItems {
+  margin-top: 15%;
+  padding-top: 0;
+  overflow-x: hidden;
+
+  a {
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: $main-color;
+    opacity: 0.6;
+    overflow-wrap: break-word;
+    text-align: center;
+
+    &:hover {
+        opacity: 1;
+    }
+  }
+}
+
+.floating-box {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 2ch;
+}

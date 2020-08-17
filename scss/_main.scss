@@ -1,0 +1,6 @@
+.main {
+    margin-left: map-get($sidebar-width, desktop);
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}

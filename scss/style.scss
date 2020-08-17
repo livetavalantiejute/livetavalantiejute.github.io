@@ -1,0 +1,31 @@
+@import "base";
+@import "modifiers";
+
+@import "header";
+@import "lines";
+@import "sidebar-left";
+@import "sidebar-left";
+@import "about";
+@import "main";
+@import "project";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  height: auto;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  overflow: auto;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* Nuimti underline nuo linkų*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
