@@ -14,7 +14,7 @@ h3 {
   line-height: 1.5;
   letter-spacing: 1px;
   color: #231f20;
-  margin: 0;
+  margin-bottom: 0;
   color: #0E79B2; }
 
 h4 {
@@ -23,7 +23,7 @@ h4 {
   line-height: 1.5;
   letter-spacing: 1px;
   color: #231f20;
-  margin-top: 0; }
+  margin: 0; }
 
 p {
   color: #231f20;
@@ -50,6 +50,9 @@ p {
   -o-transform: rotate(-90deg);
   /* Internet Explorer */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+
+.hide {
+  display: none !important; }
 
 .header {
   height: 100vh;
@@ -363,6 +366,7 @@ svg:hover #sidebarLogo {
       background-color: #f7f7f7;
       color: #231f20;
       padding: 1em 2em;
+      margin-top: 1em;
       text-align: left;
       text-decoration: none;
       display: inline-block;
@@ -373,9 +377,13 @@ svg:hover #sidebarLogo {
       border-radius: 12px;
       box-shadow: 3px 3px 0 #0e79b2, -3px -3px 0 white;
       align-self: flex-end;
-      transition: box-shadow 0.5s ease-in-out; }
+      transition: box-shadow 0.1s ease-in-out; }
+      .project-description .more-info:hover {
+        box-shadow: inset 3px 3px 0 rgba(14, 121, 178, 0.2), inset -3px -3px 0 rgba(255, 255, 255, 0.2); }
       .project-description .more-info:active {
         box-shadow: inset 3px 3px 0 #0e79b2, inset -3px -3px 0 white; }
+  .project h3 {
+    margin: 0; }
 
 .reverse {
   flex-direction: row-reverse; }
@@ -386,8 +394,41 @@ svg:hover #sidebarLogo {
   .reverse .more-info {
     align-self: flex-start;
     box-shadow: -3px 3px 0 #0e79b2, 3px -3px 0 white; }
+    .reverse .more-info:hover {
+      box-shadow: inset -3px 3px 0 rgba(14, 121, 178, 0.2), inset 3px -3px 0 white; }
     .reverse .more-info:active {
-      box-shadow: inset -3px 3px 0 #0e79b2, inset 3px -3px 0 white; }
+      box-shadow: inset -3px 3px 0 #0e79b2, inset 3px -3px 0 rgba(255, 255, 255, 0.2); }
+
+.panel {
+  background-color: #fafafa;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .panel p {
+    font-size: 1.6rem;
+    text-align: justify;
+    align-self: flex-start; }
+  .panel video {
+    max-width: 80%;
+    margin: 2em;
+    outline: none; }
+  .panel .grid {
+    display: grid;
+    max-width: 100%;
+    margin: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+    column-gap: 1em;
+    row-gap: 1.5em;
+    grid-auto-flow: row; }
+    .panel .grid img {
+      max-width: 100%;
+      border-radius: 8px; }
 
 html,
 body {
