@@ -1,0 +1,12 @@
+.others {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+
+    img {
+        max-width: 35%;
+        height: auto;
+        margin: 1em;
+    }
+}

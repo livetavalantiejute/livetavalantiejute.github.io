@@ -376,7 +376,6 @@ svg:hover #sidebarLogo {
       font-weight: 600;
       border-radius: 12px;
       box-shadow: 3px 3px 0 #0e79b2, -3px -3px 0 white;
-      align-self: flex-end;
       transition: box-shadow 0.1s ease-in-out; }
       .project-description .more-info:hover {
         box-shadow: inset 3px 3px 0 rgba(14, 121, 178, 0.2), inset -3px -3px 0 rgba(255, 255, 255, 0.2); }
@@ -392,7 +391,6 @@ svg:hover #sidebarLogo {
   .reverse .project-description {
     align-items: flex-end; }
   .reverse .more-info {
-    align-self: flex-start;
     box-shadow: -3px 3px 0 #0e79b2, 3px -3px 0 white; }
     .reverse .more-info:hover {
       box-shadow: inset -3px 3px 0 rgba(14, 121, 178, 0.2), inset 3px -3px 0 white; }
@@ -417,18 +415,30 @@ svg:hover #sidebarLogo {
     margin: 2em;
     outline: none; }
   .panel .grid {
-    display: grid;
+    display: flex;
     max-width: 100%;
     margin: 2em;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-content: space-between;
-    column-gap: 1em;
-    row-gap: 1.5em;
-    grid-auto-flow: row; }
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: center; }
     .panel .grid img {
-      max-width: 100%;
-      border-radius: 8px; }
+      max-width: 30%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1em;
+      flex-basis: 20%;
+      flex-shrink: 3; }
+
+.others {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center; }
+  .others img {
+    max-width: 35%;
+    height: auto;
+    margin: 1em; }
 
 html,
 body {
