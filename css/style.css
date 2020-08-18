@@ -460,13 +460,18 @@ svg:hover #sidebarLogo {
 
 .others {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
   align-items: center; }
   .others img {
-    max-width: 40%;
+    max-width: 23%;
     height: auto;
-    margin: 1em; }
+    margin: 1em 0;
+    transition: transform 0.5s ease-out;
+    border-radius: 5px; }
+    .others img:hover {
+      transform: scale(1.5);
+      z-index: 100; }
 
 footer {
   height: 50vh; }
