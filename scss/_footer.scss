@@ -1,0 +1,17 @@
+footer {
+    height: 50vh;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .links {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+
+        a{
+            color: $main-color;
+        }
+    }
+}

@@ -11,6 +11,7 @@ svg:hover #sidebarLogo {
   display: block;
   background: white;
   height: 100vh;
+  margin-right: 25px;
 
   @include z-index(sidebar);
 }

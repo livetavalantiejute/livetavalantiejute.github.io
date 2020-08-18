@@ -17,7 +17,8 @@ h3 {
   margin-bottom: 0;
   color: #0E79B2; }
 
-h4 {
+h4,
+.h4 {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.5;
@@ -255,6 +256,7 @@ svg:hover #sidebarLogo {
   display: block;
   background: white;
   height: 100vh;
+  margin-right: 25px;
   z-index: 1; }
 
 .menuItems {
@@ -292,6 +294,7 @@ svg:hover #sidebarLogo {
   display: block;
   background: white;
   height: 100vh;
+  margin-right: 25px;
   z-index: 1; }
 
 .menuItems {
@@ -321,7 +324,7 @@ svg:hover #sidebarLogo {
   z-index: 300;
   position: relative; }
   .about-text {
-    background-color: #fafafa;
+    background-color: #fff;
     margin-top: 0;
     z-index: 1;
     padding: 3.8em 0; }
@@ -346,6 +349,31 @@ svg:hover #sidebarLogo {
   max-width: 1200px;
   margin: 0 auto;
   position: relative; }
+
+.mobile {
+  display: none;
+  position: fixed;
+  width: 50vw;
+  height: auto;
+  background-color: white;
+  z-index: 1000;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+  .mobile h3 {
+    margin: 20px; }
+
+@media only screen and (max-width: 1400px) {
+  .main {
+    margin: 0 100px 0 100px;
+    position: absolute; } }
+
+@media only screen and (max-width: 1000px) {
+  .main {
+    display: none; }
+  .mobile {
+    display: block; } }
 
 .project {
   display: flex;
@@ -436,9 +464,20 @@ svg:hover #sidebarLogo {
   flex-wrap: wrap;
   align-items: center; }
   .others img {
-    max-width: 35%;
+    max-width: 40%;
     height: auto;
     margin: 1em; }
+
+footer {
+  height: 50vh; }
+  footer h2 {
+    margin-top: 0; }
+  footer .links {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between; }
+    footer .links a {
+      color: #0E79B2; }
 
 html,
 body {

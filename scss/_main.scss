@@ -4,3 +4,36 @@
     margin: 0 auto;
     position: relative;
 }
+
+.mobile {
+    display: none;
+    position: fixed;
+    width: 50vw;
+    height: auto;
+    background-color: white;
+    z-index: 1000;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h3 {
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .main {
+        margin: 0 100px 0 100px;
+        position: absolute;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
