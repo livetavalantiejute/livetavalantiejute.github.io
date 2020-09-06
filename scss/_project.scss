@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 1em 0 1em 0;
 
     .more-info {
       border: none;
@@ -35,7 +36,6 @@
       border-radius: 12px;
       box-shadow: 3px 3px 0 rgba(14, 121, 178, 1),
       -3px -3px 0 rgba(255, 255, 255, 1);
-      //align-self: flex-end;
       transition: box-shadow 0.1s ease-in-out;
 
       &:hover {
@@ -67,7 +67,6 @@
   }
 
   .more-info {
-    //align-self: flex-start;
     box-shadow: -3px 3px 0 rgba(14, 121, 178, 1),
     3px -3px 0 rgba(255, 255, 255, 1);
 
@@ -115,12 +114,38 @@
     align-items: center;
 
     img {
-      //max-width: 20%;
-      max-width: 30%; height: auto;
+      max-width: 30%;
+      height: auto;
       border-radius: 8px;
       margin: 1em;
       flex-basis: 20%;
       flex-shrink: 3;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .project-description {
+    .more-info {
+      font-size: 0.8rem;
+    }
+  }
+  .panel {
+    p {
+    font-size: 1.2rem;
+    }
+
+    .grid img {
+      max-width: 25%;
+      margin: 0.6em;
+    }
+  }  
+}
+
+@media only screen and (max-width: 820px) {
+  .panel {
+    p {
+    font-size: 0.8rem;
     }
   }
 }

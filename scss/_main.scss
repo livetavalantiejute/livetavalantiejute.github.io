@@ -28,3 +28,13 @@
         position: absolute;
     }
 }
+
+@media only screen and (max-width: 820px) {
+    .main {
+        margin: 0 40px 0 40px;
+    }
+
+    .sidebar-left {
+        display: none;
+    }
+}
