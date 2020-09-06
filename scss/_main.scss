@@ -28,12 +28,3 @@
         position: absolute;
     }
 }
-
-@media only screen and (max-width: 1000px) {
-    .main {
-        display: none;
-    }
-    .mobile {
-        display: block;
-    }
-}

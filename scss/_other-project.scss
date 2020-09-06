@@ -1,19 +1,59 @@
 .others {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 2em;
 
-    img {
-        max-width: 23%;
-        height: auto;
-        margin: 1em 0;
-        transition: transform 0.5s ease-out;
-        border-radius: 5px;
+  .column {
+    flex: 25%;
+    max-width: 23%;
+    padding: 0 4px;
+  }
 
-        &:hover {
-            transform: scale(1.5);
-            z-index: 100;
-        }
-    }
+  .column img {
+    margin-top: 1em;
+    vertical-align: middle;
+    width: 100%;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .column > img:first-of-type {
+    transform-origin: top;
+  }
+
+  .column > img:last-of-type {
+    transform-origin: bottom;
+  }
+
+  .column:first-of-type > img {
+    transform-origin: left;
+  }
+
+  .column:first-of-type > img:first-of-type {
+    transform-origin: left top;
+  }
+
+  .column:first-of-type > img:last-of-type {
+    transform-origin: left bottom;
+  }
+
+  .column:last-of-type > img {
+      transform-origin: right;
+  }
+
+  .column:last-of-type > img:first-of-type {
+      transform-origin: right top;
+  }
+
+  .column:last-of-type > img:last-of-type {
+      transform-origin: right bottom;
+  }
+}
+
+.enlarged {
+  transform: scale(1.7);
+  z-index: 100;
 }

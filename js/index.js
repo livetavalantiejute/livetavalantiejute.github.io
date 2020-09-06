@@ -17,6 +17,17 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
-}
+};
+
+let columns = document.querySelectorAll('.column');
+
+document.querySelectorAll('div.column').forEach(
+  el => el.querySelectorAll('img').forEach(
+    el => el.addEventListener('click', ()=>{
+      el.classList.toggle('enlarged');
+    })
+  )
+);
+
 
 

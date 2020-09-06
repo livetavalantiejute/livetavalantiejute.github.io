@@ -369,12 +369,6 @@ svg:hover #sidebarLogo {
     margin: 0 100px 0 100px;
     position: absolute; } }
 
-@media only screen and (max-width: 1000px) {
-  .main {
-    display: none; }
-  .mobile {
-    display: block; } }
-
 .project {
   display: flex;
   justify-content: space-between;
@@ -462,16 +456,39 @@ svg:hover #sidebarLogo {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center; }
-  .others img {
+  align-items: flex-start;
+  margin-bottom: 2em; }
+  .others .column {
+    flex: 25%;
     max-width: 23%;
-    height: auto;
-    margin: 1em 0;
-    transition: transform 0.5s ease-out;
-    border-radius: 5px; }
-    .others img:hover {
-      transform: scale(1.5);
-      z-index: 100; }
+    padding: 0 4px; }
+  .others .column img {
+    margin-top: 1em;
+    vertical-align: middle;
+    width: 100%;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    cursor: pointer; }
+  .others .column > img:first-of-type {
+    transform-origin: top; }
+  .others .column > img:last-of-type {
+    transform-origin: bottom; }
+  .others .column:first-of-type > img {
+    transform-origin: left; }
+  .others .column:first-of-type > img:first-of-type {
+    transform-origin: left top; }
+  .others .column:first-of-type > img:last-of-type {
+    transform-origin: left bottom; }
+  .others .column:last-of-type > img {
+    transform-origin: right; }
+  .others .column:last-of-type > img:first-of-type {
+    transform-origin: right top; }
+  .others .column:last-of-type > img:last-of-type {
+    transform-origin: right bottom; }
+
+.enlarged {
+  transform: scale(1.7);
+  z-index: 100; }
 
 footer {
   height: 50vh; }
