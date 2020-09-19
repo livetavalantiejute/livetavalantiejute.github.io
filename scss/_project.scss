@@ -6,10 +6,20 @@
 
   &-image {
     width: 48%;
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
     img {
       max-width: 100%;
       max-height: 100%;
+      transition: opacity 0.1s ease;
+
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 
