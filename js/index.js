@@ -1,6 +1,4 @@
 var acc = document.getElementsByClassName("more-info");
-//var acc = document.getElementsByClassName("project");
-//var acc = project.lastChild;
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -19,15 +17,24 @@ for (i = 0; i < acc.length; i++) {
   });
 };
 
-let columns = document.querySelectorAll('.column');
+let columns = document.querySelectorAll('div.column');
 
-document.querySelectorAll('div.column').forEach(
+
+columns.forEach(
   el => el.querySelectorAll('img').forEach(
     el => el.addEventListener('click', ()=>{
+      document.querySelectorAll('.column img').forEach(
+       img => {
+         if (img !== el) {
+         img.classList.remove('enlarged');
+         }
+       }
+      )
       el.classList.toggle('enlarged');
     })
-  )
+  ),
 );
+
 
 
 

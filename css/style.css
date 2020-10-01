@@ -619,17 +619,10 @@ svg:hover #sidebarLogo {
   .others .column {
     flex: 50%;
     max-width: 40%; }
-  .others .column > img:first-of-type,
-  .others .column > img:last-of-type,
-  .others .column > img:first-of-type {
-    transform-origin: center; }
-  .others .column:first-of-type > img:first-of-type,
-  .others .column:first-of-type > img:last-of-type,
-  .others .column:first-of-type > img {
-    transform-origin: center; }
-  .others .column:last-of-type > img:first-of-type,
-  .others .column:last-of-type > img:last-of-type {
-    transform-origin: center; }
+  .others .column:nth-of-type(2n-1) > img {
+    transform-origin: left; }
+  .others .column:nth-of-type(2n) > img {
+    transform-origin: right; }
   .enlarged {
     transform: scale(1.3); } }
 

@@ -65,21 +65,29 @@
       max-width: 40%;
     }
 
-    .column > img:first-of-type,
-    .column > img:last-of-type,
-    .column > img:first-of-type {
-      transform-origin: center;
+    // .column > img:first-of-type,
+    // .column > img:last-of-type,
+    // .column > img:first-of-type {
+    //   transform-origin: center;
+    // }
+
+    // .column:first-of-type > img:first-of-type,
+    // .column:first-of-type > img:last-of-type,
+    // .column:first-of-type > img {
+    //   transform-origin: center;
+    // }
+
+    // .column:last-of-type > img:first-of-type,
+    // .column:last-of-type > img:last-of-type {
+    //   transform-origin: center;
+    // }
+
+    .column:nth-of-type(2n-1) > img {
+      transform-origin: left;
     }
 
-    .column:first-of-type > img:first-of-type,
-    .column:first-of-type > img:last-of-type,
-    .column:first-of-type > img {
-      transform-origin: center;
-    }
-
-    .column:last-of-type > img:first-of-type,
-    .column:last-of-type > img:last-of-type {
-      transform-origin: center;
+    .column:nth-of-type(2n) > img {
+      transform-origin: right;
     }
   }
 
