@@ -21,9 +21,9 @@ let columns = document.querySelectorAll('div.column');
 
 
 columns.forEach(
-  el => el.querySelectorAll('img').forEach(
+  el => el.querySelectorAll('img, video').forEach(
     el => el.addEventListener('click', ()=>{
-      document.querySelectorAll('.column img').forEach(
+      document.querySelectorAll('.column img, .column video').forEach(
        img => {
          if (img !== el) {
          img.classList.remove('enlarged');
