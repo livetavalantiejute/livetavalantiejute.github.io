@@ -25,7 +25,7 @@
     transform-origin: top;
   }
 
-  .column > img:last-of-type {
+  .column > :last-child {
     transform-origin: bottom;
   }
 
@@ -66,11 +66,13 @@
       max-width: 40%;
     }
 
-    .column:nth-of-type(2n-1) > img {
+    .column:nth-of-type(2n-1) > img,
+    .column:nth-of-type(2n-1) > video {
       transform-origin: left;
     }
 
-    .column:nth-of-type(2n) > img {
+    .column:nth-of-type(2n) > img,
+    .column:nth-of-type(2n) > video {
       transform-origin: right;
     }
   }

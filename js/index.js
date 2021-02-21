@@ -35,6 +35,6 @@ columns.forEach(
   ),
 );
 
-
+AOS.init();
 
 

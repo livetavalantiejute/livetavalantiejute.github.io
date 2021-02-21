@@ -597,7 +597,7 @@ svg:hover #sidebarLogo {
     cursor: pointer; }
   .others .column > :first-child {
     transform-origin: top; }
-  .others .column > img:last-of-type {
+  .others .column > :last-child {
     transform-origin: bottom; }
   .others .column:first-of-type > img {
     transform-origin: left; }
@@ -620,9 +620,11 @@ svg:hover #sidebarLogo {
   .others .column {
     flex: 50%;
     max-width: 40%; }
-  .others .column:nth-of-type(2n-1) > img {
+  .others .column:nth-of-type(2n-1) > img,
+  .others .column:nth-of-type(2n-1) > video {
     transform-origin: left; }
-  .others .column:nth-of-type(2n) > img {
+  .others .column:nth-of-type(2n) > img,
+  .others .column:nth-of-type(2n) > video {
     transform-origin: right; }
   .enlarged {
     transform: scale(1.7); } }
